@@ -10,8 +10,9 @@ from sklearn.preprocessing import LabelBinarizer
 
 cam = cv2.VideoCapture(0)
 model = tf.keras.models.load_model("model1")
-LB = LabelBinarizer()
 
+LB = LabelBinarizer()
+LB.fit_transform(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
 
 st.set_page_config(page_title = "OCR Warehouse",
                    page_icon = ":bar_chart:",
@@ -52,10 +53,9 @@ def sort_contours(cnts, method="left-to-right"):
     return (cnts, boundingBoxes)
 
 
-def get_letters(img):
+def get_letters(opencv_image):
     letters = []
-    image = cv2.imread(img)
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2GRAY)
     ret,thresh1 = cv2.threshold(gray ,127,255,cv2.THRESH_BINARY_INV)
     dilated = cv2.dilate(thresh1, None, iterations=2)
 
@@ -66,7 +66,7 @@ def get_letters(img):
     for c in cnts:
         if cv2.contourArea(c) > 20:
             (x, y, w, h) = cv2.boundingRect(c)
-            cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.rectangle(opencv_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         roi = gray[y:y + h, x:x + w]
         thresh = cv2.threshold(roi, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
         thresh = cv2.resize(thresh, (32, 32), interpolation = cv2.INTER_CUBIC)
@@ -77,8 +77,7 @@ def get_letters(img):
         ypred = LB.inverse_transform(ypred)
         [x] = ypred
         letters.append(x)
-    cam.release()
-    cv2.destroyAllWindows()
+    return letters, opencv_image
 
 
 def main() :
@@ -97,22 +96,44 @@ def main() :
 
     st.markdown(html_temp, unsafe_allow_html=True)
 
+def get_word(letter):
+    word = "".join(letter)
+    return word
+
 if __name__ == '__main__':
     main()
 
 if "Live Camera" in PO_letter:
-    webrtc_streamer(key="key")
+    # Menghubungkan python dengan webcam
+    cap = cv2.VideoCapture(0)
+    # Looping selama webcam aktif
+    while cap.isOpened():
+        # Membaca gambar pada frame
+        ret, frame = cap.read()
+        # (Testing) memastikan frame tersebut sudah sama dengan hasil pembacaan openCV
+        # dengan mengubah gambar menjadi gray
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        # Menampilkan frame (gambar) pada window baru
+        cv2.imshow('frame', gray)
+        # Menghentikan looping jika memencet tombol `q`
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    # Memutuskan koneksi dengan webcam
+    cap.release()
+    # Menutup windows yang terbuka dari imshow
+    cv2.destroyAllWindows()
+
 
 image_file = None
 
 if "Insert Picture" in PO_letter:
     image_file = st.file_uploader("Choose a file", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
-        our_image = Image.open(image_file)
-        st.text("Original Image")
-        st.image(our_image)
+        our_image = Image.open(image_file) # Membaca file dari file uploader menjadi sebuah objek gambar PIL
+        opencv_image = np.array(our_image) # Mengubah objek gambar PIL menjadi bentuk gambar yang dapat diterima open OpenCV
 
 if st.button("Recognise"):
-    result_img = get_letters(our_image)
-    st.image(result_img)
-
+    letter, opencv_image = get_letters(opencv_image)
+    word = get_word(letter)
+    st.write(word)
+    st.image(opencv_image)
