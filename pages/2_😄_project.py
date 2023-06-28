@@ -162,7 +162,6 @@ if st.button("Recognize"):
     letter, opencv_image = get_letters(opencv_image)
     word = get_words(letter)
     df = update_dataframe(word)
-
-st.image(opencv_image)
+    st.image(opencv_image)
 my_table = st.table(df)
 
