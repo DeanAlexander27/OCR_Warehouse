@@ -2,7 +2,7 @@
 Create OCR tools using CNN in area inbound and outbound Warehouse, focus in problem's case : 
 - Manpower warehouse to reduce incorrect input information to database.
 - Maximise process in paperless.
-- Improve time management in operational inbound warehouse.
+- Improve time management in operational inbound warehouse, **due to automation system recognise transform/automate update in file data.csv.**
 
 👉 **Just to remember this dashboard only use for offline activity, there is not any link streamlit deploy due to file temporary database in data.csv**
 
@@ -11,9 +11,15 @@ Create OCR tools using CNN in area inbound and outbound Warehouse, focus in prob
 ![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/1582cad4-42ae-432c-b464-5227e7a306fb)
 ![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/3e741d31-6a8a-4915-9988-077db47b0e29)
 ![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/16d5ac80-081d-4647-b118-09d8fd9dc33c)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/30baac0d-6dbf-4702-9d6f-e99b9eb14910)
+
 
 # Requirements
 Install the dependencies with pip , all information can be accessed in file **requirements.txt**
+
+# Run the App
+  # vanilla terminal
+  streamlit run 1_PROFILE.py
 
 # Profile
 ![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/92bbdb97-9b69-4a72-9bd8-88c7c48a0d01)
