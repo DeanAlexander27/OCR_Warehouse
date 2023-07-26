@@ -14,3 +14,16 @@ Create OCR tools using CNN in area inbound and outbound Warehouse, focus in prob
 
 # Requirements
 Install the dependencies with pip , all information can be accessed in file **requirements.txt**
+
+# Profile
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/80de375f-e66d-4d57-99fe-53384ec1b854)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/75eb0fa0-dfcc-4ac1-9f0b-07b9ac7fdbab)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/d5c7dd93-4c44-4347-abd2-99ece68275dd)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/c3e517be-9630-47bf-94fd-baa1aa1fd7d4)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/ab160ef1-7dfe-4323-9b91-ab6f6404ffbc)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/cb8b2ddf-873c-4bc8-a0df-fb122d16fbf0)
+
+
+
+
+
