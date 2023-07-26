@@ -7,21 +7,26 @@ Create OCR tools using CNN in area inbound and outbound Warehouse, focus in prob
 👉 **Just to remember this dashboard only use for offline activity, there is not any link streamlit deploy due to file temporary database in data.csv**
 
 # Screenshots
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/f6291b02-7ea8-4ea7-a64e-b6f1af1c881e)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/95a17dcf-32be-42d7-ad4f-f0bb79fc2a54)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/a10cfc43-af1a-4f2a-8873-6750e1de6217)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/40b4345a-7569-4da9-945c-810c67caca10)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/22a7b758-2e22-4ac6-b311-88df2b580056)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/1582cad4-42ae-432c-b464-5227e7a306fb)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/3e741d31-6a8a-4915-9988-077db47b0e29)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/16d5ac80-081d-4647-b118-09d8fd9dc33c)
 
 # Requirements
 Install the dependencies with pip , all information can be accessed in file **requirements.txt**
 
 # Profile
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/80de375f-e66d-4d57-99fe-53384ec1b854)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/75eb0fa0-dfcc-4ac1-9f0b-07b9ac7fdbab)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/d5c7dd93-4c44-4347-abd2-99ece68275dd)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/c3e517be-9630-47bf-94fd-baa1aa1fd7d4)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/ab160ef1-7dfe-4323-9b91-ab6f6404ffbc)
-![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/cb8b2ddf-873c-4bc8-a0df-fb122d16fbf0)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/92bbdb97-9b69-4a72-9bd8-88c7c48a0d01)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/0ada0784-304c-4dc7-9cd0-ed369b4864f6)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/f574ee22-e785-4462-8538-54974e30637b)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/2049d40e-77ab-41c0-a2e8-c3516726ab26)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/a0356d8e-29b0-4a88-9a10-cb89dcdde514)
+![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/46f18b1e-1ebe-4e29-a845-e1465a36019e)
+
+
+
+
+
 
 
 
