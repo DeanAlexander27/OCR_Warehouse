@@ -18,8 +18,7 @@ Create OCR tools using CNN in area inbound and outbound Warehouse, focus in prob
 Install the dependencies with pip , all information can be accessed in file **requirements.txt**
 
 # Run the App
-  # vanilla terminal
-  streamlit run 1_PROFILE.py
+**streamlit run 1_PROFILE.py** on your virtual environment, but don't forget to change directory to your working file's directory.
 
 # Profile
 ![image](https://github.com/DeanAlexander27/OCR_Warehouse/assets/123348110/92bbdb97-9b69-4a72-9bd8-88c7c48a0d01)
